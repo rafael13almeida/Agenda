@@ -4,7 +4,7 @@ include_once("templates/header.php");
 
 <div class="container">
     <?php if(isset($printMsg) && $printMsg != ''): ?>
-        <p id="msg"><?= $printMsg ?>z</p>
+        <p id="msg"><?= $printMsg ?></p>
     <?php endif; ?>
     <h1 id="titulo">Minha Agenda</h1>
     <?php if(count($contatos) > 0 ): ?>
@@ -21,14 +21,14 @@ include_once("templates/header.php");
             <tbody>
                 <?php foreach($contatos as $contato): ?>
                     <tr>
-                        <td scope="row"><?= $contato["id"] ?></td>
+                        <td scope="row" class="col-id"><?= $contato["id"] ?></td>
                         <td scope="row"><?= $contato["nome"] ?></td>
                         <td scope="row"><?= $contato["telefone"] ?></td>
                         <td scope="row"><?= $contato["email"] ?></td>
                         <td class="actions">
                             <a href="#"><i class="fas fa-eye check-icon"></i></a>
                             <a href="#"><i class="far fa-edit edit-icon"></i></a>
-                            <button type="submit"><i class="fas fa-times delete-icon"></i></button>
+                            <button type="submit" class="delete-btn"><i class="fas fa-times delete-icon"></i></button>
                         </td>
                     </tr>
                 <?php endforeach; ?>
