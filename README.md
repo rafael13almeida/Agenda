@@ -2,4 +2,4 @@
 
 ### Estilos
 
-Bootstrap e Font-Awesome. <https://cdnjs.com/>
+* Bootstrap e Font-Awesome. <https://cdnjs.com/>
