@@ -2,7 +2,7 @@
 include_once("templates/header.php");
 ?>
 
-<h1>Testando 123...</h1>
+<h1>Adicionar Contato</h1>
 <i class="fas fa-eye"></i>
 
 <?php
