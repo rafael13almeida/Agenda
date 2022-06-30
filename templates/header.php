@@ -24,7 +24,7 @@ if(isset($_SESSION['msg'])) {
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
             <a class="navbar-brand" href="<?= $BASE_URL ?>index.php">
                 <img src="<?= $BASE_URL ?>img/logo2.svg" alt="Agenda">
             </a>

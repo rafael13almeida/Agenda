@@ -68,21 +68,24 @@
     margin-top: 30px;
 }
 
-/* SHOW */
+/* VIEW */
 
 #view-contato-container {
     max-width: 500px;
-    margin: 0 auto;
 }
 
 .bold {
     font-weight: bold;
 }
 
-.back-linl-container {
-    display: block;
-    width: 500px;
-    margin: 30px auto 0;    
+/* CREATE */
+
+#create-form {
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-
+#adicionar {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
