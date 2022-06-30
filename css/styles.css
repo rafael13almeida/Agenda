@@ -67,3 +67,22 @@
     margin: 0 auto;
     margin-top: 30px;
 }
+
+/* SHOW */
+
+#view-contato-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.back-linl-container {
+    display: block;
+    width: 500px;
+    margin: 30px auto 0;    
+}
+
+
