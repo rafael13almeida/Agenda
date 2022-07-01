@@ -33,6 +33,37 @@ if (!empty($data)) {
             $error = $e->getMessage();
             echo "Erro: $error";
         }
+
+    } elseif($data["type"] === "edit") {
+
+        $nome = $data["nome"];
+        $telefone = $data["telefone"];
+        $email = $data["email"];
+        $observacoes = $data["observacoes"];
+        $id = $data["id"];
+
+        $query = "UPDATE contatos 
+                  SET nome = :nome, telefone = :telefone, email = :email, observacoes = :observacoes 
+                  WHERE id = :id";
+        
+        $stmt = $conn->prepare($query);
+
+        $stmt->bindParam(":nome", $nome);
+        $stmt->bindParam(":telefone", $telefone);
+        $stmt->bindParam(":email", $email);
+        $stmt->bindParam(":observacoes", $observacoes);
+        $stmt->bindParam(":id", $id);
+
+        try {
+
+            $stmt->execute();
+            $_SESSION["msg"] = "Seu contato foi atualizado !";
+        
+        } catch(PDOException $e) {
+            $error = $e->getMessage();
+            echo "Erro: $error";
+        }
+        
     }
 
     header("Location:" . $BASE_URL . "../index.php");
