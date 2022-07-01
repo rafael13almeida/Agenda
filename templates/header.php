@@ -31,7 +31,7 @@ if(isset($_SESSION['msg'])) {
             <div>
                 <div class="navbar-nav">
                     <a class="nav-link" href="<?= $BASE_URL ?>index.php"  id="home-link">Agenda</a>
-                    <a class="nav-link" href="<?= $BASE_URL ?>create.php" id="home-link">Adicionar Contato</a>
+                    <a class="nav-link" href="<?= $BASE_URL ?>create.php">Adicionar Contato</a>
                 </div>
             </div>
         </nav>
