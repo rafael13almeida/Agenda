@@ -64,6 +64,23 @@ if (!empty($data)) {
             echo "Erro: $error";
         }
         
+    } elseif($data["type"] === "delete") {
+        $id = $data["id"];
+
+        $query = "DELETE FROM contatos WHERE id = :id";
+
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(":id", $id);
+        
+        try {
+
+            $stmt->execute();
+            $_SESSION["msg"] = "Contato Removido !";
+        
+        } catch(PDOException $e) {
+            $error = $e->getMessage();
+            echo "Erro: $error";
+        }
     }
 
     header("Location:" . $BASE_URL . "../index.php");
